@@ -2,27 +2,19 @@
 
 var path = require('path');
 var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool: 'eval-source-map',
   entry: [
-    'webpack-hot-middleware/client?reload=true', 'babel-polyfill',
-    path.join(__dirname, 'client')
+   'babel-polyfill', path.join(__dirname, 'client')
   ],
   output: {
     path: path.join(__dirname, '/dist/'),
-    filename: '[name].js',
+    filename: 'bundle.js',
     publicPath: '/'
   },
 
   plugins: [
-    new HtmlWebpackPlugin({
-      template: 'client/views/index.html',
-      inject: 'body',
-      filename: 'index.html'
-    }),
-    new webpack.HotModuleReplacementPlugin()
   ],
 
   module: {
