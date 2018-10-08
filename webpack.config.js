@@ -9,7 +9,7 @@ module.exports = {
    'babel-polyfill', path.join(__dirname, 'client')
   ],
   output: {
-    path: path.join(__dirname, '/dist/'),
+    path: path.resolve(process.cwd(), 'dist'),
     filename: 'bundle.js',
     publicPath: '/'
   },
