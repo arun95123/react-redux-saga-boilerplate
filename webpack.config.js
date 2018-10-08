@@ -4,7 +4,6 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  devtool: 'eval-source-map',
   entry: [
    'babel-polyfill', path.join(__dirname, 'client')
   ],
@@ -24,7 +23,7 @@ module.exports = {
       exclude: /node_modules/,
       use: [{
          loader: 'babel-loader',
-         options: { presets: ["react", "es2015", "stage-0", "react-hmre"] }
+         options: { presets: ["react", "es2015", "stage-0"] }
        }]
     },
      {
