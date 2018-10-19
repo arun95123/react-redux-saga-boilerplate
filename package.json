@@ -12,9 +12,8 @@
     "test": "",
     "start": "node server",
     "fakeservice": "node fake-service/start.js",
-    "build": "rimraf dist && cross-env NODE_ENV=production webpack --config ./webpack.dev.js --progress --profile --colors",
+    "build": "rimraf dist && cross-env NODE_ENV=production webpack --config ./webpack.config.js --progress --profile --colors",
     "eslint": "eslint .",
-    "start:dev": "npm-run-all build start",
     "jscs": "jscs ."
   },
   "dependencies": {
@@ -26,7 +25,6 @@
     "express-handlebars": "^3.0.0",
     "faker": "^4.1.0",
     "lodash": "^4.17.10",
-    "npm-run-all": "^4.1.3",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -70,9 +68,7 @@
     "sinon-chai": "^2.8.0",
     "stats-webpack-plugin": "^0.6.2",
     "style-loader": "^0.20.1",
-    "webpack": "^4.15.0",
-    "webpack-cli": "^3.0.8",
-    "webpack-merge": "^4.1.3",
+    "webpack": "^3.10.0",
     "webpack-dev-middleware": "^2.0.4",
     "webpack-hot-middleware": "^2.2.0"
   }
