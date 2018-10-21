@@ -13,7 +13,7 @@
     "start": "node server",
     "fakeservice": "node fake-service/start.js",
     "build": "rimraf dist && cross-env NODE_ENV=production webpack --config ./webpack.config.js --watch --progress --profile --colors",
-    "start:all": "npm-run-all fakeservice start",
+    "start:all": "run-p fakeservice start",
     "start:dev": "run-p build start:all",
     "eslint": "eslint .",
     "jscs": "jscs ."
