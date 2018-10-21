@@ -3,9 +3,8 @@ const router=express.Router();
 const getDataService= require('../service/get-data');
 
 router.get('/data',(req,res) => {
-  getDataService.getData().then(response => {
-    return res.json(response);
-  }).catch(err => {
+  getDataService.getData().then(response => res.json(response))
+  .catch(err => {
     console.log('API CALL FAILED');
   })
 });
